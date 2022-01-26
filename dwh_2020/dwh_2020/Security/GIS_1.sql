@@ -1,0 +1,2 @@
+﻿CREATE USER [GIS] FOR LOGIN [GIS];
+

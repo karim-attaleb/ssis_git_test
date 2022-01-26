@@ -1,0 +1,3 @@
+﻿CREATE USER [GNB_Reader] FOR LOGIN [GNB_Reader]
+    WITH DEFAULT_SCHEMA = [GNB];
+

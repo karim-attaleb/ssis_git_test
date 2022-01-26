@@ -1,0 +1,3 @@
+﻿CREATE USER [FF_Editor] FOR LOGIN [FF_Editor]
+    WITH DEFAULT_SCHEMA = [FF];
+

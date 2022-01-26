@@ -1,0 +1,3 @@
+﻿CREATE USER [IR_GIS_Reader] FOR LOGIN [IR_GIS_Reader]
+    WITH DEFAULT_SCHEMA = [GIS];
+

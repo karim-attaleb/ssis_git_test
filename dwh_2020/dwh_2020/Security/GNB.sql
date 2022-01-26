@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [GNB]
+    AUTHORIZATION [dbo];
+

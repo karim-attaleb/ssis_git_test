@@ -1,0 +1,3 @@
+﻿CREATE USER [OOMP_Editor] FOR LOGIN [OOMP_Editor]
+    WITH DEFAULT_SCHEMA = [OOMP];
+

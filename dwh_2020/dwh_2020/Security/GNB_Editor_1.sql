@@ -1,0 +1,3 @@
+﻿CREATE USER [GNB_Editor] FOR LOGIN [GNB_Editor]
+    WITH DEFAULT_SCHEMA = [GNB];
+

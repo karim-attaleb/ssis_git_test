@@ -1,0 +1,3 @@
+﻿CREATE USER [IR_Reader] FOR LOGIN [IR_Reader]
+    WITH DEFAULT_SCHEMA = [IR];
+

@@ -1,0 +1,10 @@
+26/01/2022 18:12:24	This log contains information about the import schema operation into project 'dwh_2020' on computer 'S335668' by user 'saaaa10082'.
+26/01/2022 18:12:25	Deserializing model
+26/01/2022 18:12:29	Resolving model
+26/01/2022 18:12:34	Visiting imported model for types
+26/01/2022 18:12:35	Scanning project for duplicate elements
+26/01/2022 18:12:36	Finished duplicate element processing
+26/01/2022 18:12:46	Processing extra files
+26/01/2022 18:12:46	Finished importing Data-tier Application file.
+26/01/2022 18:12:46	A summary of the import was saved to the following location: C:\Users\saaaa10082\source\repos\ssis_git_test\dwh_2020\dwh_2020\Import Schema Logs\dwh_2020_20220126051224.log
+26/01/2022 18:12:46	Click Finish to continue...

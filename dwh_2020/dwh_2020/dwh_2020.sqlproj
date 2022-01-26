@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>dwh_2020</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{370c7568-70fc-465c-8847-c1ca2d833a4a}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>dwh_2020</RootNamespace>
+    <AssemblyName>dwh_2020</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="DOSIS\" />
+    <Folder Include="DOSIS\Tables\" />
+    <Folder Include="DR\" />
+    <Folder Include="DR\Tables\" />
+    <Folder Include="FF\" />
+    <Folder Include="FF\Tables\" />
+    <Folder Include="GIS\" />
+    <Folder Include="GIS\Tables\" />
+    <Folder Include="IR\" />
+    <Folder Include="IR\Tables\" />
+    <Folder Include="OOMP\" />
+    <Folder Include="OOMP\Tables\" />
+    <Folder Include="Verkennota\" />
+    <Folder Include="Verkennota\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="DOSIS\Views\" />
+    <Folder Include="GIS\Views\" />
+    <Folder Include="Medewerkers\" />
+    <Folder Include="Medewerkers\Views\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="GIS\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\DubbelePolygonen.sql" />
+    <Build Include="dbo\Tables\SchadeLijstInbo.sql" />
+    <Build Include="dbo\Tables\temp.sql" />
+    <Build Include="dbo\Tables\tmpinbo.sql" />
+    <Build Include="DOSIS\Tables\DosisBron.sql" />
+    <Build Include="DOSIS\Tables\DosisDossierStatus.sql" />
+    <Build Include="DR\Tables\Beslissing.sql" />
+    <Build Include="DR\Tables\BeslissingBedrag.sql" />
+    <Build Include="DR\Tables\Dossier.sql" />
+    <Build Include="DR\Tables\DossierFase.sql" />
+    <Build Include="DR\Tables\DossierStatus.sql" />
+    <Build Include="DR\Tables\DossierType.sql" />
+    <Build Include="DR\Tables\DossierTypeAcmRol.sql" />
+    <Build Include="DR\Tables\DossierTypeIdmContext.sql" />
+    <Build Include="DR\Tables\DossierTypeVersie.sql" />
+    <Build Include="DR\Tables\OrganisatieThema.sql" />
+    <Build Include="DR\Tables\WerkThema.sql" />
+    <Build Include="FF\Tables\AfschotPlanGrofWild.sql" />
+    <Build Include="FF\Tables\BasisOppervlakteSubsidie.sql" />
+    <Build Include="FF\Tables\Bestrijdingsactie.sql" />
+    <Build Include="FF\Tables\Diersoort.sql" />
+    <Build Include="FF\Tables\ErkenningWBE.sql" />
+    <Build Include="FF\Tables\Examen.sql" />
+    <Build Include="FF\Tables\ExamenBlok.sql" />
+    <Build Include="FF\Tables\ExamenBlokType.sql" />
+    <Build Include="FF\Tables\ExamenCentrum.sql" />
+    <Build Include="FF\Tables\ExamenCode.sql" />
+    <Build Include="FF\Tables\ExamenType.sql" />
+    <Build Include="FF\Tables\ExamenVraag.sql" />
+    <Build Include="FF\Tables\ExamenVraagType.sql" />
+    <Build Include="FF\Tables\FaunaBeheerPlan.sql" />
+    <Build Include="FF\Tables\ImportDOS.sql" />
+    <Build Include="FF\Tables\IndieningAantal.sql" />
+    <Build Include="FF\Tables\IndieningAantalType.sql" />
+    <Build Include="FF\Tables\IndieningBestrijdingsactie.sql" />
+    <Build Include="FF\Tables\IndieningFaunaFlora.sql" />
+    <Build Include="FF\Tables\IndieningLocatieFaunaFlora.sql" />
+    <Build Include="FF\Tables\IndieningSchade.sql" />
+    <Build Include="FF\Tables\IndieningSchadeType.sql" />
+    <Build Include="FF\Tables\IndieningTeBeperkenSchade.sql" />
+    <Build Include="FF\Tables\JachtExamen.sql" />
+    <Build Include="FF\Tables\JachtExamenPraktisch.sql" />
+    <Build Include="FF\Tables\JachtExamenPraktischType.sql" />
+    <Build Include="FF\Tables\JachtExamenTheoretisch.sql" />
+    <Build Include="FF\Tables\JachtExamenTheoretischType.sql" />
+    <Build Include="FF\Tables\JachtVergunning.sql" />
+    <Build Include="FF\Tables\JachtVergunningType.sql" />
+    <Build Include="FF\Tables\JachtVerlof.sql" />
+    <Build Include="FF\Tables\JachtVerlofHistoriek.sql" />
+    <Build Include="FF\Tables\JachtVerlofType.sql" />
+    <Build Include="FF\Tables\JachtVerlofVolgNummer.sql" />
+    <Build Include="FF\Tables\Label.sql" />
+    <Build Include="FF\Tables\LabelStatus.sql" />
+    <Build Include="FF\Tables\MeldingAfschot.sql" />
+    <Build Include="FF\Tables\MeldingAfschotDier.sql" />
+    <Build Include="FF\Tables\MeldingBestrijding.sql" />
+    <Build Include="FF\Tables\MeldingBestrijdingDatum.sql" />
+    <Build Include="FF\Tables\MeldingBijzondereJacht.sql" />
+    <Build Include="FF\Tables\PartijFaunaFlora.sql" />
+    <Build Include="FF\Tables\Plantsoort.sql" />
+    <Build Include="FF\Tables\SchadeRegistratie.sql" />
+    <Build Include="FF\Tables\SchadeType.sql" />
+    <Build Include="FF\Tables\VisVerlof.sql" />
+    <Build Include="FF\Tables\VisVerlofType.sql" />
+    <Build Include="FF\Tables\VisVerlofTypeTarief.sql" />
+    <Build Include="FF\Tables\VoorlopigArrondissementCommissaris.sql" />
+    <Build Include="FF\Tables\VoorlopigLabel.sql" />
+    <Build Include="FF\Tables\WildRapport.sql" />
+    <Build Include="FF\Tables\WildSchade.sql" />
+    <Build Include="FF\Tables\WildSchadeOpmerkingenVerslagPlaatsbezoek.sql" />
+    <Build Include="GIS\Tables\CrabObjectType.sql" />
+    <Build Include="GIS\Tables\IndieningLocatie.sql" />
+    <Build Include="GIS\Tables\IndieningLocatieType.sql" />
+    <Build Include="GIS\Tables\LocatieAdres.sql" />
+    <Build Include="GIS\Tables\LocatieGeometrieLijn.sql" />
+    <Build Include="GIS\Tables\LocatieGeometriePoly.sql" />
+    <Build Include="GIS\Tables\LocatieGeometriePunt.sql" />
+    <Build Include="GIS\Tables\LocatiePerceel.sql" />
+    <Build Include="GIS\Tables\LocatiePunt.sql" />
+    <Build Include="GIS\Tables\LocatiePuntPrecisieType.sql" />
+    <Build Include="GIS\Tables\LocatieType.sql" />
+    <Build Include="IR\Tables\AcmRol.sql" />
+    <Build Include="IR\Tables\AppLog.sql" />
+    <Build Include="IR\Tables\Attachment.sql" />
+    <Build Include="IR\Tables\AttachmentDocumentType.sql" />
+    <Build Include="IR\Tables\AttachmentInfo.sql" />
+    <Build Include="IR\Tables\AttachmentSet.sql" />
+    <Build Include="IR\Tables\AttachmentTechnicalType.sql" />
+    <Build Include="IR\Tables\Attribute.sql" />
+    <Build Include="IR\Tables\AttributeDataType.sql" />
+    <Build Include="IR\Tables\AttributePresentationType.sql" />
+    <Build Include="IR\Tables\AttributeSet.sql" />
+    <Build Include="IR\Tables\AttributeSetAttribute.sql" />
+    <Build Include="IR\Tables\AttributeSetType.sql" />
+    <Build Include="IR\Tables\AttributeValidation.sql" />
+    <Build Include="IR\Tables\AttributeValidationType.sql" />
+    <Build Include="IR\Tables\AuditLog.sql" />
+    <Build Include="IR\Tables\Bron.sql" />
+    <Build Include="IR\Tables\DashboardMessage.sql" />
+    <Build Include="IR\Tables\DeadlineType.sql" />
+    <Build Include="IR\Tables\Doelgroep.sql" />
+    <Build Include="IR\Tables\DynamicInfo.sql" />
+    <Build Include="IR\Tables\DynamicInfoSet.sql" />
+    <Build Include="IR\Tables\Indiening.sql" />
+    <Build Include="IR\Tables\IndieningCategorie.sql" />
+    <Build Include="IR\Tables\IndieningFase.sql" />
+    <Build Include="IR\Tables\IndieningPartij.sql" />
+    <Build Include="IR\Tables\IndieningPartijHoedanigheid.sql" />
+    <Build Include="IR\Tables\IndieningPartijHoedanigheidType.sql" />
+    <Build Include="IR\Tables\IndieningPartijType.sql" />
+    <Build Include="IR\Tables\IndieningPeriode.sql" />
+    <Build Include="IR\Tables\IndieningPeriodeType.sql" />
+    <Build Include="IR\Tables\IndieningReferentie.sql" />
+    <Build Include="IR\Tables\IndieningReferentieType.sql" />
+    <Build Include="IR\Tables\IndieningRelatie.sql" />
+    <Build Include="IR\Tables\IndieningRelatieType.sql" />
+    <Build Include="IR\Tables\IndieningStatus.sql" />
+    <Build Include="IR\Tables\IndieningType.sql" />
+    <Build Include="IR\Tables\IndieningTypeAcmRol.sql" />
+    <Build Include="IR\Tables\IndieningTypeVersie.sql" />
+    <Build Include="IR\Tables\IndieningTypeVersieParent.sql" />
+    <Build Include="IR\Tables\IndieningTypeVersieRole.sql" />
+    <Build Include="IR\Tables\IndieningUrlIDType.sql" />
+    <Build Include="IR\Tables\IntegrationMessage.sql" />
+    <Build Include="IR\Tables\IntegrationMessageHistory.sql" />
+    <Build Include="IR\Tables\Kaartlaag.sql" />
+    <Build Include="IR\Tables\KaartlaagType.sql" />
+    <Build Include="IR\Tables\KaartlaagTypeGroep.sql" />
+    <Build Include="IR\Tables\Lock.sql" />
+    <Build Include="IR\Tables\LockType.sql" />
+    <Build Include="IR\Tables\MagdaLog.sql" />
+    <Build Include="IR\Tables\MagdaLogType.sql" />
+    <Build Include="IR\Tables\Message.sql" />
+    <Build Include="IR\Tables\MessagePriority.sql" />
+    <Build Include="IR\Tables\MessageStatus.sql" />
+    <Build Include="IR\Tables\MessageType.sql" />
+    <Build Include="IR\Tables\Parameter.sql" />
+    <Build Include="IR\Tables\ParameterType.sql" />
+    <Build Include="IR\Tables\PartijAdres.sql" />
+    <Build Include="IR\Tables\PartijAdresType.sql" />
+    <Build Include="IR\Tables\PartijCategorie.sql" />
+    <Build Include="IR\Tables\PartijIdentificatie.sql" />
+    <Build Include="IR\Tables\PartijIdentificatieType.sql" />
+    <Build Include="IR\Tables\PartijType.sql" />
+    <Build Include="IR\Tables\Payment.sql" />
+    <Build Include="IR\Tables\PaymentType.sql" />
+    <Build Include="IR\Tables\RecordLog.sql" />
+    <Build Include="IR\Tables\Sjabloon.sql" />
+    <Build Include="IR\Tables\SjabloonDocumentType.sql" />
+    <Build Include="IR\Tables\SjabloonInfo.sql" />
+    <Build Include="IR\Tables\SjabloonInfoType.sql" />
+    <Build Include="IR\Tables\SjabloonTechnicalType.sql" />
+    <Build Include="IR\Tables\Template.sql" />
+    <Build Include="IR\Tables\TemplateItem.sql" />
+    <Build Include="IR\Tables\TemplateItemLine.sql" />
+    <Build Include="IR\Tables\TemplateItemStatus.sql" />
+    <Build Include="IR\Tables\TemplateItemType.sql" />
+    <Build Include="IR\Tables\TemplateStatus.sql" />
+    <Build Include="IR\Tables\TemplateType.sql" />
+    <Build Include="IR\Tables\Unit.sql" />
+    <Build Include="IR\Tables\UserCode.sql" />
+    <Build Include="IR\Tables\UserCodeDependency.sql" />
+    <Build Include="IR\Tables\UserCodeGroup.sql" />
+    <Build Include="IR\Tables\Workflow.sql" />
+    <Build Include="IR\Tables\WorkflowAction.sql" />
+    <Build Include="IR\Tables\WorkflowCondition.sql" />
+    <Build Include="IR\Tables\WorkflowEvent.sql" />
+    <Build Include="IR\Tables\WorkflowHistory.sql" />
+    <Build Include="IR\Tables\WorkflowStatus.sql" />
+    <Build Include="IR\Tables\WorkflowType.sql" />
+    <Build Include="OOMP\Tables\IndieningBezwaar.sql" />
+    <Build Include="OOMP\Tables\IndieningBezwaarCategorie.sql" />
+    <Build Include="OOMP\Tables\IndieningBezwaarLocatie.sql" />
+    <Build Include="OOMP\Tables\IndieningBezwaarType.sql" />
+    <Build Include="Verkennota\Tables\AankondigingBeheerplan.sql" />
+    <Build Include="Verkennota\Tables\AankondigingBeheerplanType.sql" />
+    <Build Include="Verkennota\Tables\AmbitieNiveau.sql" />
+    <Build Include="Verkennota\Tables\AmbitieNiveauType.sql" />
+    <Build Include="Verkennota\Tables\CriteriaLBWDetail.sql" />
+    <Build Include="Verkennota\Tables\CriteriaLBWDetailType.sql" />
+    <Build Include="Verkennota\Tables\EcologischeFunctie.sql" />
+    <Build Include="Verkennota\Tables\EcologischeFunctieType.sql" />
+    <Build Include="Verkennota\Tables\EconomischeFunctie.sql" />
+    <Build Include="Verkennota\Tables\EconomischeFunctieType.sql" />
+    <Build Include="Verkennota\Tables\EconomischGebruik.sql" />
+    <Build Include="Verkennota\Tables\EconomischGebruikType.sql" />
+    <Build Include="Verkennota\Tables\ErkenningNatuurGebiedMotivatie.sql" />
+    <Build Include="Verkennota\Tables\ErkenningNatuurGebiedMotivatieType.sql" />
+    <Build Include="Verkennota\Tables\IndieningLocatieVerkenningsnota.sql" />
+    <Build Include="Verkennota\Tables\IndieningVerkenningsnota.sql" />
+    <Build Include="Verkennota\Tables\Inventarisatie.sql" />
+    <Build Include="Verkennota\Tables\InventarisatieType.sql" />
+    <Build Include="Verkennota\Tables\NatuurstreefbeeldCategorie.sql" />
+    <Build Include="Verkennota\Tables\NatuurstreefbeeldCategorieType.sql" />
+    <Build Include="Verkennota\Tables\ProcesgestuurdeNatuur.sql" />
+    <Build Include="Verkennota\Tables\ProcesgestuurdeNatuurType.sql" />
+    <Build Include="Verkennota\Tables\SocialeFunctieHuidig.sql" />
+    <Build Include="Verkennota\Tables\SocialeFunctieHuidigType.sql" />
+    <Build Include="Verkennota\Tables\SocialeFunctieToekomstig.sql" />
+    <Build Include="Verkennota\Tables\SocialeFunctieToekomstigType.sql" />
+    <Build Include="Verkennota\Tables\StandaardFiche.sql" />
+    <Build Include="Verkennota\Tables\StandaardFicheType.sql" />
+    <Build Include="Verkennota\Tables\Vegetatie.sql" />
+    <Build Include="Verkennota\Tables\VegetatieType.sql" />
+    <Build Include="Verkennota\Tables\WerkwijzeUitwerking.sql" />
+    <Build Include="Verkennota\Tables\WerkwijzeUitwerkingType.sql" />
+    <Build Include="dbo\Views\Datadictionary.sql" />
+    <Build Include="dbo\Views\vJachtvergunning.sql" />
+    <Build Include="dbo\Views\vJachtvergunning_ExportToCsv.sql" />
+    <Build Include="dbo\Views\vJachtvergunning_ExportToCsv_old.sql" />
+    <Build Include="dbo\Views\vJachtverlof.sql" />
+    <Build Include="dbo\Views\vJachtverlof_ExportToCsv.sql" />
+    <Build Include="dbo\Views\vJachtverlof_ExportToCsv_old.sql" />
+    <Build Include="dbo\Views\vJachtverlof_old.sql" />
+    <Build Include="dbo\Views\vMeldingAfschot.sql" />
+    <Build Include="dbo\Views\vMeldingBestrijding.sql" />
+    <Build Include="dbo\Views\vMeldingBestrijding_old.sql" />
+    <Build Include="dbo\Views\vMeldingSchade.sql" />
+    <Build Include="dbo\Views\vSchadelijstInbo.sql" />
+    <Build Include="dbo\Views\vVisverlof.sql" />
+    <Build Include="DOSIS\Views\vDosisDossierStatus.sql" />
+    <Build Include="GIS\Views\vIndieningLocatieEnvelopePoly.sql" />
+    <Build Include="Medewerkers\Views\vAcmRol.sql" />
+    <Build Include="Storage\Data.sql" />
+    <Build Include="Storage\DataBin.sql" />
+    <Build Include="Storage\DataLog.sql" />
+    <Build Include="Storage\Indexes.sql" />
+    <Build Include="Security\ANB_saaaa10069.sql" />
+    <Build Include="Security\ANB_saaaa8544.sql" />
+    <Build Include="Security\ANB_SQL Reporting Analyst.sql" />
+    <Build Include="Security\ANB_SQL ViewDatabaseState.sql" />
+    <Build Include="Security\ANB_SQL ViewDefinition.sql" />
+    <Build Include="Security\ANB_verbisbe.sql" />
+    <Build Include="Security\DemoApp_Reader.sql" />
+    <Build Include="Security\FF_Editor.sql" />
+    <Build Include="Security\FF_Reader.sql" />
+    <Build Include="Security\GIS.sql" />
+    <Build Include="Security\GNB_Editor.sql" />
+    <Build Include="Security\GNB_Reader.sql" />
+    <Build Include="Security\INBO_PushWild.sql" />
+    <Build Include="Security\IndieningRegister_Admin.sql" />
+    <Build Include="Security\IR_Editor.sql" />
+    <Build Include="Security\IR_GIS_Reader.sql" />
+    <Build Include="Security\IR_Reader.sql" />
+    <Build Include="Security\linked_srv.sql" />
+    <Build Include="Security\Medewerkers_Editor.sql" />
+    <Build Include="Security\Medewerkers_Reader.sql" />
+    <Build Include="Security\OOMP_Editor.sql" />
+    <Build Include="Security\OOMP_Reader.sql" />
+    <Build Include="Security\sqlpackage_extractor.sql" />
+    <Build Include="Security\Verkennota_Editor.sql" />
+    <Build Include="Security\Verkennota_Reader.sql" />
+    <Build Include="Security\RL_IR_sqlpackage_extractor.sql" />
+    <Build Include="Security\ANB_saaaa10069_1.sql" />
+    <Build Include="Security\ANB_saaaa8544_1.sql" />
+    <Build Include="Security\ANB_SQL Reporting Analyst_1.sql" />
+    <Build Include="Security\ANB_SQL ViewDatabaseState_1.sql" />
+    <Build Include="Security\ANB_SQL ViewDefinition_1.sql" />
+    <Build Include="Security\ANB_verbisbe_1.sql" />
+    <Build Include="Security\DemoApp_Reader_1.sql" />
+    <Build Include="Security\FF_Editor_1.sql" />
+    <Build Include="Security\FF_Reader_1.sql" />
+    <Build Include="Security\GIS_1.sql" />
+    <Build Include="Security\GNB_Editor_1.sql" />
+    <Build Include="Security\GNB_Reader_1.sql" />
+    <Build Include="Security\INBO_PushWild_1.sql" />
+    <Build Include="Security\IndieningRegister_Admin_1.sql" />
+    <Build Include="Security\IR_Editor_1.sql" />
+    <Build Include="Security\IR_GIS_Reader_1.sql" />
+    <Build Include="Security\IR_Reader_1.sql" />
+    <Build Include="Security\linked_srv_1.sql" />
+    <Build Include="Security\Medewerkers_Editor_1.sql" />
+    <Build Include="Security\Medewerkers_Reader_1.sql" />
+    <Build Include="Security\OOMP_Editor_1.sql" />
+    <Build Include="Security\OOMP_Reader_1.sql" />
+    <Build Include="Security\sqlpackage_extractor_1.sql" />
+    <Build Include="Security\Verkennota_Editor_1.sql" />
+    <Build Include="Security\Verkennota_Reader_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\CleanString.sql" />
+    <Build Include="dbo\Functions\Temp_ConvertToLocalTime.sql" />
+    <Build Include="dbo\Stored Procedures\sp_WhoIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\uspBatchCleanupAttachments.sql" />
+    <Build Include="dbo\Stored Procedures\uspDoNothing.sql" />
+    <Build Include="GIS\Stored Procedures\GetIndieningLocatieEnvelopePoly.sql" />
+    <Build Include="Security\ANB_SQL ViewDatabaseState_2.sql" />
+    <Build Include="Security\ANBLIB.sql" />
+    <Build Include="Security\DOSIS.sql" />
+    <Build Include="Security\DR.sql" />
+    <Build Include="Security\FF.sql" />
+    <Build Include="Security\GIS_2.sql" />
+    <Build Include="Security\GNB.sql" />
+    <Build Include="Security\IR.sql" />
+    <Build Include="Security\Medewerkers.sql" />
+    <Build Include="Security\OOMP.sql" />
+    <Build Include="Security\Pasbeo.sql" />
+    <Build Include="Security\Verkennota.sql" />
+    <Build Include="ExtendedProperties.sql" />
+  </ItemGroup>
+</Project>

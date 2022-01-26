@@ -1,0 +1,2 @@
+﻿CREATE USER [INBO_PushWild] FOR LOGIN [INBO_PushWild];
+
